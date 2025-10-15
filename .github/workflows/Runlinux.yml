@@ -1,0 +1,15 @@
+name: Run linux commands
+on: workflow_dispatch #on what event we have to run the workflow
+jobs:
+ job1: #give name to the job
+  runs-on: ubuntu-latest #run the job where? -on the ubuntu vm
+  steps:
+   - name: execute linux command
+     run: echo "Hello All"
+ job2:
+  runs-on: ubuntu-24.04
+  steps:
+  - name: Execute set of linux commands
+    run:
+     hostname -s
+     echo "Thank you All"
